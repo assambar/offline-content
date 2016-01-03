@@ -1,0 +1,25 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html dir="ltr" mozdisallowselectionprint moznomarginboxes>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="pdfjs-1.2.109-dist/web/viewer.css"/>
+    <script src="pdfjs-1.2.109-dist/web/compatibility.js"></script>
+    <link rel="resource" type="application/l10n" href="locale/locale.properties"/>
+    <script src="l10n.js"></script>
+    <script src="../build/pdf.js"></script>
+
+</head>
+<body>
+    <p>
+        <a href="/browse/dir/{{file.basedir.id}}">Parent Dir</a> |
+        <a href="/browse/raw/file/{{file.id}}">Download</a> the file "{{file.file_path}}""(<i>{{file.mime_type}}</i>)
+    </p>
+    <iframe src="{% static 'pdfjs-1.2.109-dist/web/viewer.html'%}?file=/browse/raw/file/{{file.id}}"
+        style="width:100%; height:90vh;"
+    />
+</body>

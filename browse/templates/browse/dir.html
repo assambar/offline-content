@@ -1,0 +1,7 @@
+    <a href="/browse/">All Dirs</a> | Browsing {{base_dir.dir_path}}
+    <ul>
+    {% for file in base_dir.filerecord_set.all %}
+        <li> <a href="/browse/show/file/{{file.id}}">{{file.file_path}} </a></li>
+    {% endfor %}
+    </ul>
+

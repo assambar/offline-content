@@ -1,0 +1,10 @@
+;;files to ignore
+;;settings.py
+db.sqlite3
+
+;;extensions to ignore
+*.log
+*.pyc
+
+;;directories to ignore
+;;some-dir/

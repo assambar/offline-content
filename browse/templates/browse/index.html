@@ -1,0 +1,13 @@
+    Base dirs:
+{% if base_dirs_list %}
+    <ul>
+    {% for base_dir in base_dirs_list %}
+        <li><a href="/browse/dir/{{ base_dir.id }}/">{{ base_dir.dir_path }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No base dirs are set.</p>
+{% endif %}
+
+<p>Run <code>python manage.py createsuperuser</code> to create admin superuser,
+then go to <a href="/admin">/admin</a> and add a base dir</p>
