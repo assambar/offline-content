@@ -2,9 +2,12 @@
 Server for simple browsing and playing of offline multimedia in intranet.
 
 1. Install django
-2. python manage.py createsuperuser
-    Create some admin user to use with your local db
-2. python manage.py runserver 0.0.0.0:8000
+2. Create some admin user to use with your local db
+
+    python manage.py createsuperuser
+2. Run the server on all interfaces (will use localhost otherwise)
+    
+    python manage.py runserver 0.0.0.0:8000
 3. Go do /admin to add a directory. Just add the path
 
 Paths in the browser
